@@ -804,19 +804,33 @@ font-size: 70px;
 
 # Git
 
-```terminal
-git init
+```
+
+<!-- 개행문자(NewLine) 설정 -->
 git config --global core.autocrlf true
+
+<!-- 사용자 정보 -->
 git config --global user.name 'TeconPark'
 git config --global user.email 'pakjaejin@gmail.com'
+
+<!-- 구성확인 -->
 git config --global --list
 git status
+
+<!-- 버전관리 시작 -->
+git init
+
+<!-- 버전관리(변경사항 추적)할 파일 지정 -->
 git add .
+<!-- git add 파일명 -->
+
 git status
-git commit -m 'Start project'
-git status
+
+<!-- 버전명 지정 새로운 버전 생성 -->
 git commit -m 'Start_project'
 git log
+
+<!-- 원격외부환경 연결 및 저장 -->
 git remote add origin https://github.com/teconpark/starbucks.git
 git push origin master
 
