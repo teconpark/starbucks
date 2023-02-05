@@ -802,6 +802,21 @@ font-size: 70px;
 ```
 
 
+## 2. 로그인 페이지 만들기
+### 1) signin 디렉토리구성 및 시작
+. index.html 파일작성 : root 디렉토리의 index.html과 공통요소를 모두 복사하여 시작점 만들기
+. css, js 파일 위치 수정 : ./ --> ../
+. 사용하지 않는 외부 `<link>` 소스와 `<script>`소스 삭제
+
+### 2) CSS파일 작성
+. main.css 정리 : main.css에서 공통으로 적용되는 부분은 따로 common.css로 옮기고 `<link>`소스를 변경함
+. signin.css생성 : 로그인 화면에만 적용할 css 따로 작성하여 `<link>`
+
+### 3) JS파일 작성
+. main.js 정리 : main.js에서 공통으로 적용되는 부분은 따로 common.js로 옮기고  `<script>`소스를 변경함
+
+
+
 # Git
 
 ## 1. 시작
