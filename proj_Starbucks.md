@@ -802,10 +802,25 @@ font-size: 70px;
 ```
 
 
+## 2. 로그인 페이지 만들기
+### 1) signin 디렉토리구성 및 시작
+. index.html 파일작성 : root 디렉토리의 index.html과 공통요소를 모두 복사하여 시작점 만들기
+. css, js 파일 위치 수정 : ./ --> ../
+. 사용하지 않는 외부 `<link>` 소스와 `<script>`소스 삭제
+
+### 2) CSS파일 작성
+. main.css 정리 : main.css에서 공통으로 적용되는 부분은 따로 common.css로 옮기고 `<link>`소스를 변경함
+. signin.css생성 : 로그인 화면에만 적용할 css 따로 작성하여 `<link>`
+
+### 3) JS파일 작성
+. main.js 정리 : main.js에서 공통으로 적용되는 부분은 따로 common.js로 옮기고  `<script>`소스를 변경함
+
+
+
 # Git
 
+## 1. 시작
 ```
-
 <!-- 개행문자(NewLine) 설정 -->
 git config --global core.autocrlf true
 
@@ -835,3 +850,24 @@ git remote add origin https://github.com/teconpark/starbucks.git
 git push origin master
 
 ```
+## 2. Branch
+```
+git branch
+gir branch -a
+
+git branch signin
+git branch
+
+git checkout signin
+<!-- signin branch 생성 후 작업 -->
+git status
+
+git commit -m 'SignIn_Page'
+git log
+
+git checkout master
+<!-- 디렉토리 확인. signin branch 작성 후 작업내용은 master branch에서 확인할 수 없음. master branch는 signin branch에서의 작업에 의해 영향을 받지 않음 -->
+
+git checkout signin
+
+
