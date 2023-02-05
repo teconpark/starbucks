@@ -804,8 +804,8 @@ font-size: 70px;
 
 # Git
 
+## 1. 시작
 ```
-
 <!-- 개행문자(NewLine) 설정 -->
 git config --global core.autocrlf true
 
@@ -835,3 +835,24 @@ git remote add origin https://github.com/teconpark/starbucks.git
 git push origin master
 
 ```
+## 2. Branch
+```
+git branch
+gir branch -a
+
+git branch signin
+git branch
+
+git checkout signin
+<!-- signin branch 생성 후 작업 -->
+git status
+
+git commit -m 'SignIn_Page'
+git log
+
+git checkout master
+<!-- 디렉토리 확인. signin branch 작성 후 작업내용은 master branch에서 확인할 수 없음. master branch는 signin branch에서의 작업에 의해 영향을 받지 않음 -->
+
+git checkout signin
+
+
